@@ -1,7 +1,7 @@
 :root {
-  --bg-color: #f8f8f8;
-  --card-bg: #ffffff;
-  --text-color: #111;
+  --bg-color: #343541;
+  --card-bg: #444654;
+  --text-color: white;
   --accent-color: #10a37f;
   --accent-hover: #0e8e70;
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,34 +11,43 @@ body {
   margin: 0;
   font-family: var(--font-family);
   background: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .container {
   background: var(--card-bg);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
   width: 100%;
   max-width: 400px;
   text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease;
 }
 
-h2 {
-  color: var(--text-color);
-  margin-bottom: 20px;
+/* Shift login form to right on larger screens */
+@media screen and (min-width: 768px) {
+  .container.login-page {
+    margin-left: auto;
+    margin-right: 5%;
+  }
 }
 
+/* Form styles reused across both pages */
 input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
   border-radius: 6px;
   font-size: 16px;
+  background: #40414f;
+  color: var(--text-color);
 }
 
 button {
@@ -51,6 +60,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -69,5 +79,39 @@ a:hover {
 hr {
   margin: 20px 0;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #555;
+}
+
+/* Google Sign-In button styling */
+.g_id_signin {
+  margin: 10px 0;
+}
+
+/* Additional styling for the header */
+h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Add this to your styles.css */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  width: auto;
+  padding: 0;
+}
+
+.password-toggle:hover {
+  color: var(--accent-color);
 }

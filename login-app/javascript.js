@@ -28,3 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// Add this to javascript.js
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  const toggle = input.nextElementSibling;
+  
+  if (input.type === "password") {
+    input.type = "text";
+    toggle.textContent = "👁️";
+  } else {
+    input.type = "password";
+    toggle.textContent = "👁️";
+  }
+}
