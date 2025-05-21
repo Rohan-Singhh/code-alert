@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Competitive Programming Tracker</h1>
+            <div class="search-box">
+                <input type="text" id="handleInput" placeholder="Enter Codeforces/LeetCode handle">
+                <select id="platformSelect">
+                    <option value="codeforces">Codeforces</option>
+                    <option value="leetcode">LeetCode</option>
+                </select>
+                <button id="fetchBtn">Fetch Stats</button>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <!-- Profile Section -->
+            <div class="profile-card card">
+                <div class="profile-header">
+                    <img id="userAvatar" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="Avatar">
+                    <div>
+                        <h2 id="userName">User Handle</h2>
+                        <p id="userRank">Rank: Not fetched</p>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>Total Solved</h3>
+                        <p id="totalSolved">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Rating</h3>
+                        <p id="userRating">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Max Rating</h3>
+                        <p id="maxRating">0</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Contests</h3>
+                        <p id="contestsCount">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Difficulty Distribution -->
+            <div class="card">
+                <h2>Difficulty Distribution</h2>
+                <canvas id="difficultyChart"></canvas>
+            </div>
+
+            <!-- Tags Distribution -->
+            <div class="card">
+                <h2>Tags Distribution</h2>
+                <canvas id="tagsChart"></canvas>
+            </div>
+
+            <!-- Rating History -->
+            <div class="card">
+                <h2>Rating History</h2>
+                <canvas id="ratingChart"></canvas>
+            </div>
+
+            <!-- Recent Submissions -->
+            <div class="card">
+                <h2>Recent Submissions</h2>
+                <div id="submissionsList" class="submissions-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
