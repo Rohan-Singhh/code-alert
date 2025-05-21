@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign In</h2>
+
+    <div id="g_id_onload"
+         data-client_id="140636728323-2qqa8a0fg8lv80k9vv9nicefbsq0vc40.apps.googleusercontent.com"
+         data-context="signin"
+         data-ux_mode="popup"
+         data-callback="handleCredentialResponse"
+         data-auto_prompt="false">
+    </div>
+    
+    <div class="g_id_signin" data-type="standard"></div>
+
+    <hr>
+
+    <form action="#" method="post">
+      <input type="email" placeholder="Email" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit">Sign In</button>
+    </form>
+
+    <p>New here? <a href="register.html">Create an account</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
