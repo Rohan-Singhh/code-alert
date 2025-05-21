@@ -1,6 +1,16 @@
+:root {
+  --bg-color: #f8f8f8;
+  --card-bg: #ffffff;
+  --text-color: #111;
+  --accent-color: #10a37f;
+  --accent-hover: #0e8e70;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,32 +18,56 @@ body {
 }
 
 .container {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
+h2 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
 input {
-  width: 90%;
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
   margin: 10px 0;
-  border-radius: 6px;
   border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 button {
-  width: 95%;
-  padding: 10px;
-  background: #2196F3;
+  width: 100%;
+  padding: 12px;
+  background: var(--accent-color);
   color: white;
   border: none;
   border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: #0b7dda;
+  background: var(--accent-hover);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eee;
 }
