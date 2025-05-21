@@ -74,18 +74,15 @@ hr {
   border-top: 1px solid #555;
 }
 
-/* Google Sign-In button styling */
 .g_id_signin {
   margin: 10px 0;
 }
 
-/* Additional styling for the header */
 h2 {
   margin-bottom: 20px;
   color: var(--text-color);
 }
 
-/* Add this to your styles.css */
 .password-container {
   position: relative;
   width: 100%;
