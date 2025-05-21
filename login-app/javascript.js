@@ -31,9 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // Add this to javascript.js
 function togglePassword(inputId) {
   const input = document.getElementById(inputId);
+  const toggle = document.querySelector(`[onclick="togglePassword('${inputId}')"]`);
+  
   if (input.type === "password") {
     input.type = "text";
+    toggle.textContent = "👁️‍🗨️"; // Crossed eye icon
   } else {
     input.type = "password";
+    toggle.textContent = "👁️"; // Regular eye icon
   }
 }
